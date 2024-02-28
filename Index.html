@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Quran Kareem| القرآن الكريم</title>
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="Browse, Search, and Listen to the Holy Quran. With accurate Quran text and Quran translations in various languages.">
+  <meta name="keywords" content="Quran, Translation, Authentic, Accurate, Qur'an, Text, Kuran, Roots, Koran, Recitation, Tartil, Tarteel, Learn, Quraan, Online, Application, Download, تنزيل, القرآن, الكريم, قرائت, قرآن, ترتيل, Keywords">
+  <meta name="google-site-verification" content="CJe3dBnJEyw0mAYhAKykXbqlE0FT5y6DYi_nvSzgpMo">
+  <meta name="google-site-verification" content="UBkTIlG-WYvxA24clT7L8blWV9IHB2tSneIYPqTJL4c">
+  <link rel="shortcut icon" href="/img/icons/tanzil.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/img/icons/site.webmanifest">
+  <meta name="application-name" content="Tanzil">
+  <meta name="apple-mobile-web-app-title" content="Tanzil">
+  <link href="/dist/main.css?v24449" rel="stylesheet">
+  <style>
+    /* load default font */
+    @font-face {
+      font-family: "hafs";
+      src: url('/fonts/hafs/hafs.eot');
+      src: url('/fonts/hafs/hafs.woff2') format('woff2'),
+           url('/fonts/hafs/hafs.woff') format('woff'),
+           url('/fonts/hafs/hafs.otf') format('opentype');
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <div id="jplayer-box"></div>
+  <div class="font-tester events"></div>
+  <script>
+    function checkIsMobile() {
+      var isMobile = /webkit.*mobile|webOS|Android|iPhone|iPod|BlackBerry|Opera Mini/i.test(
+        navigator.userAgent
+      );
+      var opt = localStorage && localStorage.getItem('opt') ?
+                JSON.parse(localStorage.getItem('opt')) : { displayMode: 'auto' };
+      var largeScreen = Math.min(screen.width, screen.height) > 760;
+      return opt.displayMode == "mobile" || (isMobile && !largeScreen && opt.displayMode != "desktop");
+    }
+    var isMobile = checkIsMobile();
+    var localhost = false;
+    var mobile = [...]; // Array containing mobile-specific content
+    var web = [...]; // Array containing web-specific content
+    var content = isMobile ? mobile : web;
+    document.getElementById('container').innerHTML = content.join("\n");
+  </script> 
+  <script src="/dist/jquery.min.js"></script> 
+  <script src="/dist/tanzil.js?v106410"></script> 
+  <script>
+    var version = '1.7.3';
+    var userLang = "Your user language string here";
+    var isPageEmbedded = "";
+    var inputArguments = { defTrans: '' };
+    initApp();
+  </script>
+</body>
+</html>
