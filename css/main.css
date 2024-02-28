@@ -1,0 +1,958 @@
+/* 
+	Tanzil Quran Navigator Style Sheets 
+	Hamid Zarrabi-Zadeh 
+	http://tanzil.net/
+*/
+
+/* ----------------- general -----------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+p,
+ul,
+ol {
+    margin: 0.5em 0px 1em;
+}
+ul,
+ol {
+    padding-left: 3em;
+}
+img {
+    border: none;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
+select,
+button,
+input {
+    font-family: Tahoma;
+    font-size: 11px;
+    vertical-align: middle;
+    background-color: white;
+}
+label {
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0 6px 0 1px;
+    height: 13px;
+}
+
+.floatStart {
+    float: left;
+}
+.floatEnd {
+    float: right;
+}
+.icon {
+    background-image: url(../img/icons.png);
+}
+.icon-btn {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.button {
+    border: 1px solid #889;
+    background-image: linear-gradient(#fff 14%, #fbfbfb 60%, #e1e2e3);
+    cursor: pointer;
+    padding: 0.2em;
+    margin: 0 0.2em;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 2px;
+}
+.button:hover {
+    border-color: #7d98b8;
+    background-image: linear-gradient(#e3f0ff 60%, #d1e6ff);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------- main page items -----------------*/
+
+.web {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.19);
+}
+#body-content {
+    width: 768px;
+    display: table-row;
+}
+#side-content {
+    width: 202px;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    color: #333;
+    padding: 0 6px 40px 6px;
+    background: #fbfbfb;
+    border: 1px solid #cccccc;
+    border-width: 0 1px 0 0;
+    display: table-cell;
+}
+#main-content {
+    width: 566px;
+    padding-bottom: 40px;
+    background: white;
+    position: relative;
+    display: table-cell;
+}
+#footer-content {
+    background: #f8f7f4;
+    border-top: silver 1px solid;
+    border-bottom: silver 1px solid;
+    padding: 4px;
+    font: 10px Verdana;
+    text-align: center;
+}
+
+/* ----------------- top menu -----------------*/
+
+#top-content {
+    background: #134165 url(../img/header.png) no-repeat;
+    height: 72px;
+    border-bottom: 1px solid #1d394c;
+}
+#top-content a:hover {
+    background: none;
+}
+.top-menu {
+    background-color: #103145;
+    background-image: linear-gradient(#3b4e68 14%, #2e4563 60%, #103145);
+    height: 19px;
+}
+.top-menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.top-menu li {
+    float: left;
+    display: block;
+}
+.top-menu a {
+    float: left;
+    display: block;
+    padding: 0px 9px;
+    height: 19px;
+    line-height: 16px;
+    color: #c3c8cb;
+    font-family: Verdana;
+    font-size: 12px;
+}
+.top-menu a:hover {
+    background-image: linear-gradient(#668aba 14%, #6084b5 60%, #3d649a);
+    color: #fffffe;
+}
+.top-menu.embed,
+.top-menu.embed a {
+    height: 27px;
+    line-height: 26px;
+}
+.embed .embed-title a:hover {
+    background-position: 0 -1px;
+}
+
+/* ----------------- sub-menu -----------------*/
+
+.sub-menu {
+    font-family: Tahoma, Arial;
+    font-size: 11px;
+    color: #555;
+    background: #fcfcfc;
+    margin: 16px 3px 0px;
+    width: 184px;
+    overflow: visible;
+    text-align: left; /* for Opera */
+    text-shadow: 0 1px 0 #fff;
+    box-shadow: 0px 1px 1px #eee;
+    -moz-box-shadow: 0px 1px 1px #eee;
+    -webkit-box-shadow: 0 1px 1px #eee;
+}
+.menu-top {
+    /* background: transparent url(../img/menu-top.png) repeat-x 0 0; */
+    background-color: #ebeef3;
+    background-image: linear-gradient(#fcfcfc 14%, #ebeef3 65%, #dfe3ec);
+    padding: 4px 7px;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    color: #4682b4;
+    border: 1px solid #d0d0bf;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+.menu-top:hover {
+    color: blue;
+}
+.menu-content,
+.menu-body {
+    display: none;
+}
+.small-button {
+    width: 20px;
+    height: 17px;
+    padding: 0;
+    margin: 0 0 0 2px;
+}
+.menu-setting-icon {
+    position: absolute;
+    top: -18px;
+    right: -1px;
+    width: 20px;
+}
+
+.menu-body {
+    border: 1px solid #d0d0bf;
+    border-top: 0px;
+    padding: 8px 0 8px;
+    border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+}
+.menu-body .menu-row {
+    padding: 2px 0 2px 7px;
+    margin: 0;
+    position: relative;
+}
+.menu-body a {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial;
+}
+.menu-body label {
+    font-size: 11px;
+}
+.menu-body label.small {
+    width: 43px;
+    font-size: 12px;
+}
+.menu-body select.small {
+    width: 70px;
+}
+.menu-body select {
+    height: 19px;
+    width: 122px;
+    border: 1px solid #bdc7d8;
+    padding: 1px;
+}
+.menu-body select.long {
+    width: 168px;
+}
+.menu-body option {
+    padding: 1px 3px;
+}
+.menu-body input[type="text"] {
+    padding: 2px 3px;
+    border: 1px solid #bdc7d8;
+    background-color: white;
+}
+.menu-body input.small {
+    width: 70px;
+}
+.menu-top span {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 2px;
+    width: 15px;
+    height: 10px;
+    background-position: -2px -35px;
+}
+.collapsed .menu-top span {
+    background-position: -18px -35px;
+}
+.menu-body .vspace {
+    display: block;
+    height: 5px;
+}
+.web .searchText,
+.web #gotoText {
+    width: 140px;
+    padding: 3px;
+    direction: rtl;
+    height: 21px;
+}
+#gotoText {
+    direction: ltr;
+}
+.search-menu {
+    padding-top: 10px;
+}
+.search-menu .button {
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 0px 2px;
+    border: 1px solid #3079ed;
+    border-radius: 2px;
+    background-color: #4d90fe;
+    background-image: none;
+    background-image: linear-gradient(top, #4d90fe, #4787ed);
+}
+.search-menu .button:hover {
+    border: 1px solid #2f5bb7;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #357ae8;
+    background-image: none;
+    background-image: linear-gradient(top, #4d90fe, #357ae8);
+}
+.menu-body .comment-row {
+    margin: 0 8px -4px;
+    font-size: 10px;
+    text-align: right;
+}
+.menu-body .icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+.info-mark {
+    font-size: 11px;
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    top: -4px;
+    left: 1px;
+}
+
+/* ----------------- Root list -----------------*/
+
+#rootMenu {
+    width: 140px;
+    height: 21px;
+    margin: 0;
+    direction: rtl;
+}
+#charList {
+    color: gray;
+    direction: rtl;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 5px 7px;
+    background: #f6f6fa;
+    padding: 2px 3px;
+    cursor: pointer;
+}
+#charList a {
+    color: #77b;
+    line-height: 1.5em;
+    font-family: Tahoma;
+}
+#charList a:hover {
+    background: #ddf;
+    color: blue;
+}
+.current-char {
+    background: #ddf;
+    color: green;
+}
+
+/* ----------------- recite menu -----------------*/
+
+.reciter .icon-close {
+    margin: 0 2px;
+}
+
+.icon-setting {
+    background-position: -64px -16px;
+}
+.icon-setting:hover {
+    background-position: -64px 0;
+}
+.icon-close {
+    background-position: -96px -16px;
+}
+.icon-close:hover {
+    background-position: -96px 0;
+}
+.icon-search-box {
+    background-position: -96px -48px;
+}
+
+.sound-options {
+    display: none;
+    background: #f4f4f5;
+    padding: 8px 0 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sound-options select {
+    width: 122px;
+}
+
+div.menu-row.trans-audio-row {
+    margin-top: 6px;
+}
+
+/* ----------------- search page -----------------*/
+
+.web .search-tab {
+    width: 500px;
+    margin: 25px 32px 40px;
+}
+.searchHeader {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px 3px;
+    color: #333;
+}
+.searchOffset {
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 1.1em;
+    width: 20px;
+    height: 1.5em;
+    padding: 1px;
+    text-align: center;
+    border: 2px solid #aaa;
+}
+.searchFrame {
+    font-size: 19px;
+    border: 4px solid #d4ddcc;
+    background: #f5ffeb;
+    direction: ltr;
+}
+
+/* ----------------- search results -----------------*/
+
+.searchResults {
+    font-family: hafs, "Traditional Arabic", Arial;
+    direction: rtl;
+    line-height: 2em;
+    padding: 0px;
+}
+.result {
+    cursor: pointer;
+    border-bottom: 1px solid #d4ddcc;
+    padding: 5px 10px;
+}
+.result:hover {
+    background: #e4eedc;
+}
+.searchResults .spec,
+.searchResults .number {
+    white-space: nowrap;
+    color: green;
+    font-size: 1.07em;
+}
+.searchResults .spec {
+    font-size: 0.85em;
+    margin-right: 3px;
+}
+.searchResults .number {
+    font-size: 0.8em;
+    font-family: arial;
+}
+.searchResults .highlight {
+    color: #3478f6;
+}
+#searchPattern {
+    font-family: Tahoma, "Traditional Arabic", Arial;
+    background: #f3f3ff;
+}
+
+/* ----------------- Dialog Box -----------------*/
+
+.dbox-wrapper {
+    display: none;
+    z-index: 10000;
+    position: absolute;
+    top: 125px;
+    left: 500px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+}
+.dbox-loading {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #606060;
+    font-size: 24px;
+    padding: 10px;
+}
+.dbox-title {
+    background-color: #329095;
+    color: white;
+    border: 1px solid #396565;
+    border-bottom-width: 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.dbox-title span {
+    display: inline-block;
+    padding: 5px 10px;
+}
+a.dbox-close {
+    color: #fffffe;
+    float: right;
+    padding: 5px 7px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: arial, helvetica, tahoma, verdana, sans-serif;
+}
+a.dbox-close:hover {
+    text-decoration: underline;
+}
+.dbox-body {
+    background: #fff;
+    border: 1px solid #555;
+    border-top-color: #329095;
+}
+.dbox-content {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    overflow: auto;
+}
+.dbox-footer {
+    background: #f2f2f2;
+    padding: 8px 10px 8px 10px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+.dbox-footer .button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 5px 9px;
+    margin-left: 6px;
+}
+.dbox-footer .button:hover {
+    color: black;
+}
+
+.dbox-content h2 {
+    font-size: 13px;
+    margin: 0.5em 0;
+}
+.dbox-content h3 {
+    font-size: 12px;
+    margin: 0.5em 0;
+}
+
+.dbox-content li {
+    margin-bottom: 0.2em;
+}
+.dbox-content a {
+    color: #3b5998;
+    text-decoration: none;
+}
+.dbox-content a:hover {
+    text-decoration: underline;
+}
+#about,
+#resources {
+    padding: 10px;
+}
+
+/* ----------------- Tooltips -----------------*/
+
+.tip {
+    z-index: 1000;
+}
+.tip-wrapper {
+    border: 1px solid #999;
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+    color: #454545;
+}
+.tip-title {
+    background-color: #e1e1e1;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+.tip-content {
+    background-color: #fff;
+    padding: 2px 4px;
+}
+a.tip-close,
+a.tbox-close {
+    color: #999;
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: arial, helvetica, tahoma, verdana, sans-serif;
+}
+a.tip-close:hover,
+a.tbox-close:hover {
+    text-decoration: underline;
+}
+.tip-shadow {
+    background-color: #e4e4e4;
+    background-color: rgba(200, 200, 200, 0.6);
+}
+.tip-shadow2 {
+    box-shadow: 3px 3px 4px #aaa;
+    -moz-box-shadow: 3px 3px 4px #aaa;
+    -webkit-box-shadow: 3px 3px 4px #aaa;
+}
+
+.transTip .tip-wrapper {
+    border: 2px solid #8cb;
+    font-size: 13px;
+}
+.transTip .tip-title {
+    background-color: #e2f2e8;
+    color: #333;
+    padding: 7px 10px;
+    font-weight: bold;
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+}
+.transTip .tip-content {
+    background-color: #fff;
+    color: #404040;
+    padding: 7px 10px 10px;
+}
+
+.tbox {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    padding-right: 10px;
+}
+.tbox-wrapper {
+    width: 250px;
+    background-color: #fff;
+    font-family: Tahoma, Arial;
+    font-size: 13px;
+}
+.tbox-wrapper {
+    position: relative;
+    border: 3px solid #b7d8b1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.tbox-title {
+    background-color: #e4eedc;
+    padding: 8px 7px;
+    font-weight: bold;
+    color: #333;
+    font-size: 12px;
+}
+.tbox-content {
+    background-color: #fff;
+    padding: 7px 7px 9px;
+    color: #404040;
+}
+
+.tbox-title,
+.tip-title {
+    direction: ltr;
+    text-align: left;
+}
+.tbox-title.rtl,
+.tip-title.rtl {
+    text-align: right;
+}
+.rtl a.tbox-close,
+.rtl a.tip-close {
+    float: left;
+}
+
+.console {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background: white;
+}
+
+.modal .tbox,
+.modal .tip,
+.modal .qtip {
+    visibility: hidden;
+}
+
+/* ----------------- Tipsy -----------------*/
+
+.tipsy {
+    padding: 5px;
+    position: absolute;
+    z-index: 100000;
+    font-family: "Helvetica Neue", Helvetica, Tahoma, Arial;
+    font-size: 12px;
+}
+.tipsy-inner {
+    padding: 3px 8px;
+    background-color: black;
+    color: #eee;
+    max-width: 200px;
+    text-align: center;
+}
+.tipsy-inner {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.tipsy-arrow {
+    position: absolute;
+    background: url("../img/tipsy.gif") no-repeat top left;
+    width: 9px;
+    height: 5px;
+}
+.tipsy-n .tipsy-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -4px;
+}
+.tipsy-nw .tipsy-arrow {
+    top: 0;
+    left: 10px;
+}
+.tipsy-ne .tipsy-arrow {
+    top: 0;
+    right: 10px;
+}
+.tipsy-s .tipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+    background-position: bottom left;
+}
+.tipsy-sw .tipsy-arrow {
+    bottom: 0;
+    left: 10px;
+    background-position: bottom left;
+}
+.tipsy-se .tipsy-arrow {
+    bottom: 0;
+    right: 10px;
+    background-position: bottom left;
+}
+.tipsy-e .tipsy-arrow {
+    top: 50%;
+    margin-top: -4px;
+    right: 0;
+    width: 5px;
+    height: 9px;
+    background-position: top right;
+}
+.tipsy-w .tipsy-arrow {
+    top: 50%;
+    margin-top: -4px;
+    left: 0;
+    width: 5px;
+    height: 9px;
+}
+
+/* ----------------- Misc -----------------*/
+
+.font-tester {
+    position: absolute;
+    left: -10000px;
+    font-size: 19px;
+    display: none;
+}
+#jplayer-box {
+    height: 0;
+    width: 0;
+}
+
+/* ----------------- Ui Tab -----------------*/
+
+.ui-tab {
+    margin: 0;
+    padding: 0.2em 0.2em 0;
+}
+.ui-tab li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 1px;
+    margin: 0 0.2em 1px 0;
+    border-bottom: 0 !important;
+    padding: 0;
+    white-space: nowrap;
+}
+.ui-tab a {
+    float: left;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+.ui-tab .selected {
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+.ui-tab .selected a {
+    cursor: text;
+}
+.ui-tab a:active {
+    outline: none;
+}
+
+/* ----------------- Tab strips -----------------*/
+
+#menu-tab ul {
+    background: #ebeef3;
+    border: 1px solid #cccccc;
+    border-top: 0px;
+    padding: 4px 2px 0;
+}
+#menu-tab li {
+    background: #fcfcfc;
+    border: 1px solid #cccccc;
+    margin: 0 0 0 2px;
+}
+#menu-tab a {
+    background: #eceff0;
+    padding: 1px 4px 2px;
+    font-family: Verdana;
+    font-size: 9px;
+    color: #999;
+}
+#menu-tab a:hover {
+    background: #fbfbfb;
+    color: blue;
+}
+#menu-tab .selected a,
+#menu-tab .selected a:hover {
+    background: #fcfcfc;
+    color: #4682b4;
+}
+
+#page-tab {
+    position: relative;
+}
+#page-tab ul {
+    background: #e4eedc;
+    border-bottom: 1px solid #cccccc;
+    padding: 7px 12px 0px;
+}
+#page-tab li {
+    background: white;
+    border: 1px solid #cccccc;
+    margin: 0 4px 0 2px;
+}
+#page-tab a {
+    background: #eceff0;
+    padding: 2px 6px;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #777;
+}
+#page-tab a:hover {
+    background: #fbfbfb;
+    color: #4682b4;
+}
+#page-tab .selected a,
+#page-tab .selected a:hover {
+    background: white;
+    color: blue;
+}
+
+/* ----------------- Ui Helpers -----------------*/
+
+.ui-helper-clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.ui-helper-clearfix {
+    display: inline-block;
+}
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix {
+    height: 1%;
+}
+.ui-helper-clearfix {
+    display: block;
+}
+/* end clearfix */
+
+.ui-hidden {
+    display: none;
+}
+
+/* ----------------- Misc -----------------*/
+
+.no-hover:hover {
+    background-color: white;
+}
+
+.top-ad {
+    display: none;
+    position: relative;
+    font-family: "lucida grande", tahoma, arial;
+    font-size: 12px;
+    background-color: #fff9d7;
+    border: 1px solid #e2c822;
+    padding: 8px;
+    color: #222;
+    margin: 16px 32px -4px;
+}
+
+.about-icon {
+    width: 64px;
+    height: 64px;
+    margin: 8px 8px;
+}
+
+/* ----------------- Loading image -----------------*/
+
+#loadingImage {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+
+.loader {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #329095; /* Green */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
